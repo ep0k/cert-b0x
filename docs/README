@@ -1,6 +1,6 @@
 OVERVIEW
 
-	LittleBlackBox is a collection of thousands of private SSL and SSH keys extracted from various embedded 
+	cret-b0x is a collection of thousands of private SSL and SSH keys extracted from various embedded 
 	devices. These private keys are stored in a SQLite database where they are correlated with their public
 	certificates as well as the hardware/firmware that are known to use those private keys.
 
@@ -39,25 +39,25 @@ USAGE
 
 	Check a remote host for a known SSL key pair:
 
-		$ littleblackbox --host=192.168.1.1
-		$ littleblackbox --host=192.168.1.1:443
+		$ cret-b0x --host=192.168.1.1
+		$ cret-b0x --host=192.168.1.1:443
 	
 	Check a pcap file for SSL certificate exchanges that match a known SSL private key:
 
-		$ littleblackbox --pcap=file.pcap
+		$ cret-b0x --pcap=file.pcap
 
 	Listen on a live network interface for SSL certificate exchanges that match a known SSL private key:
 
-		# littleblackbox --interface=eth0
+		# cret-b0x --interface=eth0
 
 	Check a local SSL certificate to see if it matches any that have a known SSL private key:
 
-		$ littleblackbox --pem=cert.pem
+		$ cret-b0x --pem=cert.pem
 
 	Search the database for a given hardware/firmware version:
 
-		$ littleblackbox --search=hardware.vendor=linksys
-		$ littleblackbox --search=firmware.vendor=dd-wrt
+		$ cret-b0x --search=hardware.vendor=linksys
+		$ cret-b0x --search=firmware.vendor=dd-wrt
 
 	List of all valid table/column values for use with the --search option (requires sqlite3):
 
@@ -73,12 +73,12 @@ DATABASE
 	from router and VPN firmware, most of them belonging to various versions of DD-WRT.
 
 	Of course, embedded firmwares are not the only pieces of software to use default SSL keys, and we encourage
-	the submission of any legally obtained SSL keys to the LittleBlackBox project. See the FAQ for submission
+	the submission of any legally obtained SSL keys to the cret-b0x project. See the FAQ for submission
 	criteria and instructions.
 
 FILES
 
-	/src/lbb.db		LittleBlackBox SQLite3 database.
-	/src/*			Source files for LittleBlackBox.
+	/src/lbb.db		cret-b0x SQLite3 database.
+	/src/*			Source files for cret-b0x.
 	/docs/*			License, usage and FAQ documentation.
 

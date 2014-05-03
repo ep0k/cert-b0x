@@ -3,7 +3,11 @@
 #include <sqlite3.h>
 #include <string.h>
 #include "sql.h"
+<<<<<<< HEAD
 #include "cert-b0x.h"
+=======
+#include "cret-b0x.h"
+>>>>>>> FETCH_HEAD
 
 /* 
  * Queries the database for the public / private keypair that matches the fingerprint stored in certinfo. 

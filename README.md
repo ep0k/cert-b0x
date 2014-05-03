@@ -1,4 +1,4 @@
-littleblackbox
+cert-b0x
 ==============
 
 Database of private SSL/SSH keys for embedded devices
@@ -7,7 +7,7 @@ Database of private SSL/SSH keys for embedded devices
 Dependencies
 ============
 
-LittleBlackBox requires the OpenSSL, libpcap, and sqlite3 libraries:
+cert-b0x requires the OpenSSL, libpcap, and sqlite3 libraries:
 
     $ sudo apt-get install libssl-dev libpcap-dev libsqlite3-dev
 
@@ -15,7 +15,7 @@ LittleBlackBox requires the OpenSSL, libpcap, and sqlite3 libraries:
 Installation
 ============
 
-LittleBlackBox can be built and installed using the typical configure/make process:
+cert-b0x can be built and installed using the typical configure/make process:
 
     $ ./configure
     $ make
@@ -27,25 +27,25 @@ Usage
 
 Check a remote host for a known SSL key pair:
 
-    $ littleblackbox --host=192.168.1.1
-    $ littleblackbox --host=192.168.1.1:443
+    $ cert-b0x --host=192.168.1.1
+    $ cert-b0x --host=192.168.1.1:443
 
 Check a pcap file for SSL certificate exchanges that match a known SSL private key:
 
-    $ littleblackbox --pcap=file.pcap
+    $ cert-b0x --pcap=file.pcap
 
 Listen on a live network interface for SSL certificate exchanges that match a known SSL private key:
 
-    # littleblackbox --interface=eth0
+    # cert-b0x --interface=eth0
 
 Check a local SSL certificate to see if it matches any that have a known SSL private key:
 
-    $ littleblackbox --pem=cert.pem
+    $ cert-b0x --pem=cert.pem
 
 Search the database for a given hardware/firmware version:
 
-    $ littleblackbox --search=hardware.vendor=linksys
-    $ littleblackbox --search=firmware.vendor=dd-wrt
+    $ cert-b0x --search=hardware.vendor=linksys
+    $ cert-b0x --search=firmware.vendor=dd-wrt
 
 List of all valid table/column values for use with the --search option (requires sqlite3):
 

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <getopt.h>
-#include "littleblackbox.h"
+#include "cert-b0x.h"
 #include "network.h"
 #include "certs.h"
 #include "config.h"

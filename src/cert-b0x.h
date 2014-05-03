@@ -1,5 +1,5 @@
-#ifndef __LITTLEBLACKBOX_H__
-#define __LITTLEBLACKBOX_H__
+#ifndef __cert-b0x_H__
+#define __cert-b0x_H__
 
 #define DB_NAME     "/etc/lbb.db"
 #define DB_LOCAL    "lbb.db"

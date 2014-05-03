@@ -3,7 +3,7 @@
 #include <sqlite3.h>
 #include <string.h>
 #include "sql.h"
-#include "littleblackbox.h"
+#include "cert-b0x.h"
 
 /* 
  * Queries the database for the public / private keypair that matches the fingerprint stored in certinfo. 

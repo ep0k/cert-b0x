@@ -1,14 +1,14 @@
 CC=@CC@
 CFLAGS=@CFLAGS@
 LDFLAGS=-lsqlite3 -lssl -lcrypto -lpcap -lpthread -lrt @LDL@
-TARGET=cret-b0x
+TARGET=cert-b0x
 MANPAGE=$(TARGET).1.gz
 DB=lbb.db
 prefix=@prefix@
 exec_prefix=@exec_prefix@
 datarootdir=@datarootdir@
 
-$(TARGET): cret-b0x.o
+$(TARGET): cert-b0x.o
 	$(CC) $(CFLAGS) main.c -o $(TARGET) *.o $(LDFLAGS)
 
 cret-b0x.o: common.o sql.o certs.o network.o

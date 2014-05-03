@@ -1,4 +1,4 @@
-AC_INIT(LittleBlackBox, 0.1.4)
+AC_INIT(cert-b0x, 0.1.4)
 
 AC_PROG_CC
 AC_LANG(C)

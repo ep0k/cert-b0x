@@ -1,18 +1,18 @@
 CC=@CC@
 CFLAGS=@CFLAGS@
 LDFLAGS=-lsqlite3 -lssl -lcrypto -lpcap -lpthread -lrt @LDL@
-TARGET=littleblackbox
+TARGET=cret-b0x
 MANPAGE=$(TARGET).1.gz
 DB=lbb.db
 prefix=@prefix@
 exec_prefix=@exec_prefix@
 datarootdir=@datarootdir@
 
-$(TARGET): littleblackbox.o
+$(TARGET): cret-b0x.o
 	$(CC) $(CFLAGS) main.c -o $(TARGET) *.o $(LDFLAGS)
 
-littleblackbox.o: common.o sql.o certs.o network.o
-	$(CC) $(CFLAGS) -c littleblackbox.c
+cret-b0x.o: common.o sql.o certs.o network.o
+	$(CC) $(CFLAGS) -c cret-b0x.c
 
 common.o:
 	$(CC) $(CFLAGS) -c common.c
